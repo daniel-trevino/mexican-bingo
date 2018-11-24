@@ -1,7 +1,8 @@
 // @flow
 
 const paths = {
-  frontpage: () => "/"
+  frontpage: () => "/",
+  admin: () => "/admin"
 }
 
 export default paths

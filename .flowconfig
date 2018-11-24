@@ -6,6 +6,7 @@
 [untyped]
 .*/serviceWorker.js
 .*/Socket.js
+.*/src/components/SocketContext.js
 
 [include]
 ./src

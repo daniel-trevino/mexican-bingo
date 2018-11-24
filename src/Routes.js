@@ -8,6 +8,7 @@ import {
   Switch
 } from "react-router-dom"
 import Frontpage from "./pages/Frontpage"
+import Admin from "./pages/Admin"
 import paths from "./utils/paths"
 
 class Routes extends React.Component<{}> {
@@ -18,6 +19,7 @@ class Routes extends React.Component<{}> {
           {/* <PageLayout> */}
           <Switch>
             <Route path={paths.frontpage()} exact component={Frontpage} />
+            <Route path={paths.admin()} exact component={Admin} />
             <Route render={() => <Redirect to={paths.frontpage()} />} />
           </Switch>
           {/* </PageLayout> */}
