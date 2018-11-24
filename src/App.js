@@ -7,8 +7,9 @@ import GlobalStyle from "./theme/globalStyle"
 import Routes from "./Routes"
 import theme from "./theme/theme"
 import SocketContext from "./components/SocketContext"
+import { isProductionBuild, getHostname } from "./utils/env"
 
-const SOCKET_URL = "http://localhost:8000"
+const SOCKET_URL = isProductionBuild ? getHostname() : "http://localhost:8000"
 const socket = io(SOCKET_URL)
 
 class App extends React.Component<{}> {
