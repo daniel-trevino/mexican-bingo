@@ -12,7 +12,7 @@ import { isProductionBuild } from "./utils/env"
 const SOCKET_URL = isProductionBuild
   ? window.location.hostname
   : "http://localhost:8000"
-const socket = io(SOCKET_URL)
+const socket = io(SOCKET_URL, { transports: ["websocket"] })
 
 class App extends React.Component<{}> {
   render() {
