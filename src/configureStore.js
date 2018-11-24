@@ -3,6 +3,7 @@
 import { createStore, applyMiddleware, compose } from "redux"
 import promise from "redux-promise"
 import reducer from "./reducers"
+import { isProductionBuild } from "./utils/env"
 
 export const configureStoreProd = (initialState: any) => {
   const finalCreateStore = compose(applyMiddleware(promise))(createStore)
@@ -21,7 +22,6 @@ export const configureStoreDev = (initialState: any) => {
   )
 }
 
-export const store =
-  process.env.REACT_APP_HOST_ENV === "production"
-    ? configureStoreProd()
-    : configureStoreDev()
+export const store = isProductionBuild
+  ? configureStoreProd()
+  : configureStoreDev()
