@@ -36,7 +36,8 @@ const CardModal = styled(Modal)`
   background: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.8rem;
-  height: 65vh;
+  height: 100%;
+  max-height: 50%;
   width: 35%;
   min-width: 450px;
   ${media.phone`
@@ -51,11 +52,16 @@ const CardModal = styled(Modal)`
 `
 
 const CurrentCardTitle = styled.h1`
+  margin-top: 2rem;
   font-weight: 900;
   color: ${props => props.theme.black};
 `
 
-const CurrentCard = styled.img``
+const CurrentCard = styled.img`
+  height: 100%;
+  width: 60%;
+  margin-bottom: 2rem;
+`
 
 class CardList extends Component<Props, State> {
   state = {

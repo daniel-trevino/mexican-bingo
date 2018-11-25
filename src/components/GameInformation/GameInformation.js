@@ -19,7 +19,7 @@ const AlertWrapper = styled.div`
 class GameControls extends Component<Props> {
   render() {
     const { pack, currentCard, isAdmin } = this.props
-    const noGameStarted = pack.length === 0
+    const noGameStarted = pack.length === 0 && !currentCard
     const gameStarted = Boolean(pack.length) && !currentCard
 
     if (noGameStarted) {

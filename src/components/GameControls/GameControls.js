@@ -6,6 +6,7 @@ import { Button, Alert } from "antd"
 import GameInformation from "../GameInformation/GameInformationContainer"
 import SocketContext from "../SocketContext"
 import type { Card, Pack } from "../../types/Game"
+import { media } from "../../utils/media"
 import { NO_GAME_TEXT, GAME_STARTED_TEXT } from "../../utils/translations"
 
 type Props = {
@@ -29,6 +30,9 @@ const Wrapper = styled.div`
 const LocalButton = styled.div`
   margin: 1rem 0em;
   width: 20%;
+  ${media.phone`
+    width: 100%;
+  `}
 `
 
 const AlertWrapper = styled.div`
