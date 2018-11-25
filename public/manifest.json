@@ -1,15 +1,15 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Loteria",
+  "name": "Juego de lotería en línea",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./appIcon.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#e8d82e",
+  "background_color": "#e8d82e"
 }

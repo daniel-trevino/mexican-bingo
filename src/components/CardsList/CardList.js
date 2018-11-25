@@ -59,7 +59,7 @@ const CurrentCardTitle = styled.h1`
 
 const CurrentCard = styled.img`
   height: 100%;
-  width: 60%;
+  width: 50%;
   margin-bottom: 2rem;
 `
 

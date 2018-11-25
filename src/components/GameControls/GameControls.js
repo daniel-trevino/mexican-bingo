@@ -2,16 +2,13 @@
 
 import React, { Component } from "react"
 import styled from "styled-components"
-import { Button, Alert } from "antd"
+import { Button } from "antd"
 import GameInformation from "../GameInformation/GameInformationContainer"
 import SocketContext from "../SocketContext"
-import type { Card, Pack } from "../../types/Game"
 import { media } from "../../utils/media"
-import { NO_GAME_TEXT, GAME_STARTED_TEXT } from "../../utils/translations"
+import { START_GAME_TEXT, DRAW_CARD_TEXT } from "../../utils/translations"
 
 type Props = {
-  pack: Pack,
-  currentCard: Card,
   initPack: Function,
   newCard: Function,
   socket: any
@@ -35,10 +32,6 @@ const LocalButton = styled.div`
   `}
 `
 
-const AlertWrapper = styled.div`
-  margin-bottom: 3rem;
-`
-
 class GameControls extends Component<Props> {
   startGame = () => {
     const { initPack, socket } = this.props
@@ -50,47 +43,19 @@ class GameControls extends Component<Props> {
     newCard(socket)
   }
 
-  renderGameInformation = () => {
-    const { pack, currentCard } = this.props
-    const noGameStarted = pack.length === 0
-    const gameStarted = Boolean(pack.length) && !currentCard
-
-    if (noGameStarted) {
-      return (
-        <AlertWrapper>
-          <Alert message={NO_GAME_TEXT} type="warning" showIcon />
-        </AlertWrapper>
-      )
-    }
-
-    if (gameStarted) {
-      return (
-        <AlertWrapper>
-          <Alert message={GAME_STARTED_TEXT} type="success" showIcon />
-        </AlertWrapper>
-      )
-    }
-
-    return (
-      <AlertWrapper>
-        <Alert message={currentCard.name} type="info" showIcon />
-      </AlertWrapper>
-    )
-  }
-
   render() {
     return (
       <Wrapper>
         <GameInformation isAdmin />
         <LocalButton>
           <Button type="primary" onClick={this.startGame} block>
-            Start game
+            {START_GAME_TEXT}
           </Button>
         </LocalButton>
 
         <LocalButton>
           <Button type="button" onClick={this.drawCard} block>
-            Draw a card
+            {DRAW_CARD_TEXT}
           </Button>
         </LocalButton>
       </Wrapper>
