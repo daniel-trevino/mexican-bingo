@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from "react"
+import { Button } from "antd"
 import SocketContext from "../SocketContext"
 
 type Props = {
@@ -23,12 +24,12 @@ class GameControls extends Component<Props> {
   render() {
     return (
       <div>
-        <button type="button" onClick={this.startGame}>
+        <Button type="primary" onClick={this.startGame}>
           Start game
-        </button>
-        <button type="button" onClick={this.drawCard}>
+        </Button>
+        <Button type="button" onClick={this.drawCard}>
           Draw a card
-        </button>
+        </Button>
       </div>
     )
   }
