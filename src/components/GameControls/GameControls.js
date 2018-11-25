@@ -3,6 +3,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Button, Alert } from "antd"
+import GameInformation from "../GameInformation/GameInformationContainer"
 import SocketContext from "../SocketContext"
 import type { Card, Pack } from "../../types/Game"
 import { NO_GAME_TEXT, GAME_STARTED_TEXT } from "../../utils/translations"
@@ -76,7 +77,7 @@ class GameControls extends Component<Props> {
   render() {
     return (
       <Wrapper>
-        {this.renderGameInformation()}
+        <GameInformation isAdmin />
         <LocalButton>
           <Button type="primary" onClick={this.startGame} block>
             Start game

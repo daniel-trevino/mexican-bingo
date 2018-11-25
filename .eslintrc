@@ -21,6 +21,7 @@
     "jest": true
   },
   "rules": {
+    "import/no-dynamic-require": "never",
     "flowtype/require-valid-file-annotation": [
       2,
       "always",

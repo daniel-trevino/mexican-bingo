@@ -3,12 +3,11 @@
 import React, { Component } from "react"
 import posed, { PoseGroup } from "react-pose"
 import styled from "styled-components"
-import type { Card, Pack } from "../../types/Game"
+import GameInformation from "../GameInformation/GameInformationContainer"
+import type { Card } from "../../types/Game"
 import { media } from "../../utils/media"
-import { NO_GAME_TEXT, GAME_STARTED_TEXT } from "../../utils/translations"
 
 type Props = {
-  pack: Pack,
   currentCard: Card
 }
 
@@ -76,32 +75,30 @@ class CardList extends Component<Props, State> {
 
   render() {
     const { isVisible } = this.state
-    const { pack, currentCard } = this.props
-    const noGameStarted = pack.length === 0
-    const gameStarted = Boolean(pack.length) && !currentCard
-
-    if (noGameStarted) {
-      return <p>{NO_GAME_TEXT}</p>
-    }
-
-    if (gameStarted) {
-      return <p>{GAME_STARTED_TEXT}</p>
-    }
+    const { currentCard } = this.props
 
     return (
-      <PoseGroup>
-        {isVisible && [
-          // If animating more than one child, each needs a `key`
-          <CardModal key="modal" className="modal">
-            <CurrentCardTitle>{currentCard.name}</CurrentCardTitle>
-            <CurrentCard
-              src={require(`../../images/cards/${currentCard.id}. ${
-                currentCard.name
-              }.png`)}
-            />
-          </CardModal>
-        ]}
-      </PoseGroup>
+      <>
+        <GameInformation />
+
+        {currentCard && (
+          <PoseGroup>
+            {isVisible && [
+              /* eslint-disable global-require */
+              // If animating more than one child, each needs a `key`
+              <CardModal key="modal" className="modal">
+                <CurrentCardTitle>{currentCard.name}</CurrentCardTitle>
+                <CurrentCard
+                  src={require(`../../images/cards/${currentCard.id}. ${
+                    currentCard.name
+                  }.png`)}
+                />
+              </CardModal>
+              /* eslint-enable global-require */
+            ]}
+          </PoseGroup>
+        )}
+      </>
     )
   }
 }
