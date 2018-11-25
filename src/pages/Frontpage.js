@@ -4,7 +4,6 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { SET_PACK, SET_CURRENT_CARD } from "../actionTypes"
 import SocketContext from "../components/SocketContext"
-import DefaultComponent from "../components/Default"
 import CardListContainer from "../components/CardsList/CardsListContainer"
 
 type Props = {
@@ -39,12 +38,7 @@ class Frontpage extends Component<Props> {
   }
 
   render() {
-    return (
-      <>
-        <DefaultComponent />
-        <CardListContainer />
-      </>
-    )
+    return <CardListContainer />
   }
 }
 

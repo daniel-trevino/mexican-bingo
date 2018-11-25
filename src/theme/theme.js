@@ -9,7 +9,7 @@ const theme = {
     xl: "2.5rem"
   },
   white: "#FFF",
-  primaryColor: "#008F7A", // Twisted Spot Palette - https://mycolor.space/?hex=%23845EC2&sub=1
+  primaryColor: "#e8d82e", // Twisted Spot Palette - https://mycolor.space/?hex=%23845EC2&sub=1
   primaryHover: "#492986",
   secondaryColor: "#00C9A7",
   black: "#393939",

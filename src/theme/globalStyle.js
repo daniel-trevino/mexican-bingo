@@ -18,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'Niramit', sans-serif;
+    font-family: 'Niramit', sans-serif !important;
+    background-color: ${props => props.theme.primaryColor} !important;
   }
   a {
     text-decoration: none;

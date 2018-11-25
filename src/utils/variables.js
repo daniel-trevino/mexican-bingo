@@ -15,7 +15,7 @@ export const pack = [
   },
   {
     id: 4,
-    name: "El catrín"
+    name: "El catrin"
   },
   {
     id: 5,
@@ -39,11 +39,11 @@ export const pack = [
   },
   {
     id: 10,
-    name: "El árbol"
+    name: "El arbol"
   },
   {
     id: 11,
-    name: "El melón"
+    name: "El melon"
   },
   {
     id: 12,
@@ -67,7 +67,7 @@ export const pack = [
   },
   {
     id: 17,
-    name: "El bandolón"
+    name: "El bandolon"
   },
   {
     id: 18,
@@ -79,7 +79,7 @@ export const pack = [
   },
   {
     id: 20,
-    name: "El pájaro"
+    name: "El pajaro"
   },
   {
     id: 21,
@@ -107,11 +107,11 @@ export const pack = [
   },
   {
     id: 27,
-    name: "El corazón"
+    name: "El corazon"
   },
   {
     id: 28,
-    name: "La sandía"
+    name: "La sandia"
   },
   {
     id: 29,
@@ -119,7 +119,7 @@ export const pack = [
   },
   {
     id: 30,
-    name: "El camarón"
+    name: "El camaron"
   },
   {
     id: 31,
@@ -127,7 +127,7 @@ export const pack = [
   },
   {
     id: 32,
-    name: "El músico"
+    name: "El musico"
   },
   {
     id: 33,
@@ -159,7 +159,7 @@ export const pack = [
   },
   {
     id: 40,
-    name: "El alacrán"
+    name: "El alacran"
   },
   {
     id: 41,

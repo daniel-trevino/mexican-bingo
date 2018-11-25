@@ -6,8 +6,8 @@ import GameControls from "./GameControls"
 
 // Gets the data that is on the store
 const mapStateToProps = (state: Object): Object => {
-  const { pack } = state.game
-  return { pack }
+  const { pack, currentCard } = state.game
+  return { pack, currentCard }
 }
 
 const mapDispatchToProps = (dispatch: Function): Object => ({
