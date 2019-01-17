@@ -23,6 +23,7 @@
     "styled-components": "^4.1.1"
   },
   "scripts": {
+    "now-build": "react-scripts build && mv build dist",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",

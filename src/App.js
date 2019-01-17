@@ -3,11 +3,11 @@
 import * as React from "react"
 import * as io from "socket.io-client"
 import { ThemeProvider } from "styled-components"
+import { isProductionBuild } from "./utils/env"
 import GlobalStyle from "./theme/globalStyle"
 import Routes from "./Routes"
 import theme from "./theme/theme"
 import SocketContext from "./components/SocketContext"
-import { isProductionBuild } from "./utils/env"
 
 const SOCKET_URL = isProductionBuild
   ? window.location.hostname
